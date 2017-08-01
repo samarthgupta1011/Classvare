@@ -1,0 +1,24 @@
+	{
+		"react1":"abc",
+		"react2":"pdq"
+		"products" : {
+		"p1":{
+	"_id": "597f388f094c1502d4ea7def",
+	"chemical": "H2SO4",
+	"name": "Sulphuric Acid",
+	"molMass": "98.079 g/mol",
+	"atomicNumber": "NA",
+	"color": "colourless",
+	"feature": "Acid"
+	},
+		"p2":{
+	"_id": "597f388f094c1502d4ea7def",
+	"chemical": "H2SO4",
+	"name": "Sulphuric Acid",
+	"molMass": "98.079 g/mol",
+	"atomicNumber": "NA",
+	"color": "colourless",
+	"feature": "Acid"
+	}
+		}
+	}
