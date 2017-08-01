@@ -4,7 +4,7 @@ var app = express();
 var labRouter = require('./routes/labRouter');
 
 app.use(bodyParser.json());
-app.listen(3000,function(){
+app.listen(9000,function(){
 	console.log("Listening");
 });
 
