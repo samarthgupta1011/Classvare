@@ -1,4 +1,6 @@
-var mongoClient = require('mongodb').MongoClient;
+var mongoDb = require('mongodb');
+var mongoClient = mongoDb.MongoClient;
+
 var url = 'mongodb://localhost/LabDB';
 
 	var addChemical = function(request,response){
@@ -133,12 +135,44 @@ var getChemicals = function(request,response){
 		});
 	};
 
+	var deleteChemical = function(request,response){
+	
+		mongoClient.connect(url,function(err,db){
+			if(err) throw err;
+			var o_id = new mongoDb.ObjectId(request.query._id);
+			db.collection('chemicals').deleteOne({_id:o_id},function(err,res){
+				if(err) throw err;
+				response.send(res);
+				db.close();
+
+			});
+
+		});
+	};
+
+	var deleteReaction = function(request,response){
+	
+		mongoClient.connect(url,function(err,db){
+			if(err) throw err;
+			var o_id = new mongoDb.ObjectId(request.query._id);
+			db.collection('products').deleteOne({_id:o_id},function(err,res){
+				if(err) throw err;
+				response.send(res);
+				db.close();
+
+			});
+
+		});
+	};
+
 
 module.exports = {
 	addChemical : addChemical,
 	getChemicals : getChemicals,
 	getResult : getResult,
-	addResult : addResult
+	addResult : addResult,
+	deleteReaction : deleteReaction,
+	deleteChemical : deleteChemical
 };
 
 
