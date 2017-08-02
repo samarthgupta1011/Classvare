@@ -103,18 +103,17 @@ var getChemicals = function(request,response){
 
 		mongoClient.connect(url,function(err,db){
 			if(err) throw err;
-			db.collection('products').find(q1,{p1:1,p2:1,_id:0}).toArray(function(err,resp){
+			db.collection('products').findOne(q1,{p1:1,p2:1,_id:0},function(err,resp){
 				if(err) throw err;
 
-				
-				if(JSON.stringify(resp)!=='[]'){
-					// console.log("IF");
+				if( resp!==null){
+					console.log("IF");
 					response.send(resp);
 					db.close();
 				}
 
 				else {
-					// console.log("ELSE");
+					console.log("ELSE");
 					var q2 = {
 			react1 : request.query.r2,
 			react2 : request.query.r1
@@ -122,7 +121,7 @@ var getChemicals = function(request,response){
 
 			mongoClient.connect(url,function(err,db){
 				if(err) throw err;
-				db.collection('products').find(q2,{p1:1,p2:1,_id:0}).toArray(function(err,resp){
+				db.collection('products').findOne(q2,{p1:1,p2:1,_id:0},function(err,resp){
 					if(err) throw err;
 					response.send(resp);
 					db.close();
