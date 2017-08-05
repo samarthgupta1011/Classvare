@@ -6,7 +6,7 @@ labRouter.route('/chemicals').get(labController.getChemicals)
 				.post(labController.addChemical).delete(labController.deleteChemical);
 labRouter.route('/reaction').post(labController.addResult).
 				get(labController.getResult).delete(labController.deleteReaction);
-
+labRouter.route('/reaction/all').get(labController.showReactions);
 
 module.exports = labRouter;				
 

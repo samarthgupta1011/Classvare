@@ -134,6 +134,17 @@ var getChemicals = function(request,response){
 		});
 	};
 
+var showReactions = function(request,response){
+	mongoClient.connect(url,function(err,db){
+		if(err) throw err;
+		db.collection('products').find().toArray(function(err,resp){
+			if(err) throw err;
+			response.send(resp);
+			db.close();
+		});
+	});
+};
+
 	var deleteChemical = function(request,response){
 	
 		mongoClient.connect(url,function(err,db){
@@ -171,7 +182,8 @@ module.exports = {
 	getResult : getResult,
 	addResult : addResult,
 	deleteReaction : deleteReaction,
-	deleteChemical : deleteChemical
+	deleteChemical : deleteChemical,
+	showReactions : showReactions
 };
 
 
