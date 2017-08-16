@@ -10,8 +10,12 @@ var url = 'mongodb://localhost/LabDB';
 				name : request.body.name,
 				molMass : request.body.molMass,
 				atomicNumber : request.body.atomicNumber,
-				color : request.body.color,
-				feature : request.body.feature
+				colorR : request.body.colorR,
+				colorG : request.body.colorG,
+				colorB : request.body.colorB,
+				colorA : request.body.colorA,
+				feature : request.body.feature,
+				phase : request.body.phase
 			};
 
 		mongoClient.connect(url,function(err,db){
@@ -26,11 +30,20 @@ var url = 'mongodb://localhost/LabDB';
 	};
 
 var getChemicals = function(request,response){
+
+	// mongoClient.connect(url,function(err, db){
+	// 	if(err) throw err;
+	// 	db.collection('chemicals').drop(function(err, resp){
+	// 		if(err) throw err;
+	// 		response.send(resp);
+	// 	});
+	// });
+
 	mongoClient.connect(url,function(err, db){
 		if(err) throw err;
 		db.collection('chemicals').find().toArray(function(err, chemicals){
 			if(err) throw err;
-			response.send(chemicals);
+			response.send({ chemicals : chemicals });
 			db.close();
 		});
 		
@@ -38,17 +51,6 @@ var getChemicals = function(request,response){
 };
 
 	var addResult = function(request,response){
-
-// {
-// 					name : request.body.name,
-// 					age : request.body.age,
-// 					email : request.body.email,
-// 					password : request.body.password,
-// 					address : {
-// 						country : request.body.address.country,
-// 						state : request.body.address.state
-// 					}
-
 
 				var result = {
 					react1 : request.body.react1,
@@ -59,8 +61,12 @@ var getChemicals = function(request,response){
 				name : request.body.p1.name,
 				molMass : request.body.p1.molMass,
 				atomicNumber : request.body.p1.atomicNumber,
-				color : request.body.p1.color,
-				feature : request.body.p1.feature
+				colorR : request.body.p1.colorR,
+				colorG : request.body.p1.colorG,
+				colorB : request.body.p1.colorB,
+				colorA : request.body.p1.colorA,
+				feature : request.body.p1.feature,
+				phase : request.body.p1.phase
 				}
 				,
 					p2 : {
@@ -68,8 +74,12 @@ var getChemicals = function(request,response){
 				name : request.body.p2.name,
 				molMass : request.body.p2.molMass,
 				atomicNumber : request.body.p2.atomicNumber,
-				color : request.body.p2.color,
-				feature : request.body.p2.feature
+				colorR : request.body.p2.colorR,
+				colorG : request.body.p2.colorG,
+				colorB : request.body.p2.colorB,
+				colorA : request.body.p2.colorA,
+				feature : request.body.p2.feature,
+				phase : request.body.p2.phase
 				}
 					
 				};
@@ -84,55 +94,53 @@ var getChemicals = function(request,response){
 		});	
 		};
 
-	var getResult = function(request,response){
+		var getResult = function(request,response){
 
-		// mongoClient.connect(url,function(err,db){
-		// 	if(err) throw err;
-		// 	db.collection('products').find().toArray(function(err,resp){
-		// 		if(err) throw err;
-		// 		response.send(resp);
-		// 	});
-		// });	
+			// mongoClient.connect(url,function(err, db){
+			// 	if(err) throw err;
+			// 	db.collection('products').drop(function(err, resp){
+			// 		if(err) throw err;
+			// 		response.send(resp);
+			// 	});
+			// });
 
-
-		console.log(request.query.r1);
-		var q1 = {
-			react1 : request.query.r1,
-			react2 : request.query.r2
-		};
-
-		mongoClient.connect(url,function(err,db){
-			if(err) throw err;
-			db.collection('products').findOne(q1,{p1:1,p2:1,_id:0},function(err,resp){
-				if(err) throw err;
-
-				if( resp!==null){
-					console.log("IF");
-					response.send(resp);
-					db.close();
-				}
-
-				else {
-					console.log("ELSE");
-					var q2 = {
-			react1 : request.query.r2,
-			react2 : request.query.r1
-		};
+			var q1 = {
+				react1 : request.query.r1,
+				react2 : request.query.r2
+			};
 
 			mongoClient.connect(url,function(err,db){
 				if(err) throw err;
-				db.collection('products').findOne(q2,{p1:1,p2:1,_id:0},function(err,resp){
+				db.collection('products').findOne(q1,{p1:1,p2:1,_id:0},function(err,resp){
 					if(err) throw err;
-					response.send(resp);
-					db.close();
+
+					if( resp!==null){
+						console.log("IF");
+						response.send(resp);
+						db.close();
+					}
+
+					else {
+						console.log("ELSE");
+						var q2 = {
+							react1 : request.query.r2,
+							react2 : request.query.r1
+						};
+
+						mongoClient.connect(url,function(err,db){
+							if(err) throw err;
+							db.collection('products').findOne(q2,{p1:1,p2:1,_id:0},function(err,resp){
+								if(err) throw err;
+								response.send(resp);
+								db.close();
+							});
+						});
+
+
+					}
 				});
 			});
-
-
-				}
-			});
-		});
-	};
+		};
 
 var showReactions = function(request,response){
 	mongoClient.connect(url,function(err,db){
@@ -175,6 +183,34 @@ var showReactions = function(request,response){
 		});
 	};
 
+	var editChemical = function(request,response){
+		
+		var o_id = new mongoDb.ObjectId(request.query._id);
+		mongoClient.connect(url,function(err, db){
+			if(err) throw err;
+
+
+			db.collection('chemicals').findOne({_id:o_id},function(err,resp){
+
+				if(err) throw err;
+
+				for(var key in request.body){ 
+					console.log(key);
+					resp[key] = request.body[key];
+				}
+
+				db.collection('chemicals').update({_id: o_id},{$set : resp },function(err,result){
+					response.send(result);
+				});
+				
+
+			});
+		});
+	};
+
+
+
+
 
 module.exports = {
 	addChemical : addChemical,
@@ -183,7 +219,8 @@ module.exports = {
 	addResult : addResult,
 	deleteReaction : deleteReaction,
 	deleteChemical : deleteChemical,
-	showReactions : showReactions
+	showReactions : showReactions,
+	editChemical : editChemical
 };
 
 

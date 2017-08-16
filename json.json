@@ -1,0 +1,48 @@
+
+
+chemicals json
+
+{
+"chemical": "H2SO4",
+"name": "Sulphuric Acid",
+"molMass": "98.079 g/mol",
+"atomicNumber": "123",
+"colorR": "abb",
+"colorG": "abb",
+"colorB": "abb",
+"colorA": "abb",
+"feature": "sam",
+"phase": "s"
+}
+
+reactions json
+
+
+{
+"react1": "abc",
+"react2": "pdq",
+"p1": {
+"chemical": "H2SO4",
+"name": "Sulphuric Acid",
+"molMass": "98.079 g/mol",
+"atomicNumber": "NA",
+"colorR": "abb",
+"colorG": "abb",
+"colorB": "abb",
+"colorA": "abb",
+"feature": "Acid",
+"phase": "s"
+},
+"p2": {
+"chemical": "H2123",
+"name": "Sulphur123c Acid",
+"molMass": "98.07912 g/mol",
+"atomicNumber": "NAA",
+"colorR": "abb",
+"colorG": "abb",
+"colorB": "abb",
+"colorA": "abb",
+"feature": "Acids",
+"phase": "s"
+}
+}
