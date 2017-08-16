@@ -1,0 +1,388 @@
+{
+"chemicals": [
+{
+"_id": "5981f1b5076a386bde50151a",
+"chemical": "Fe",
+"name": "Iron",
+"molMass": "55.845 g/mol",
+"atomicNumber": "26",
+"color": "brown",
+"feature": "Metal"
+},
+{
+"_id": "59857968aa0f6a75f339c896",
+"chemical": "C20H14O4",
+"name": "Phenolphthalein",
+"molMass": "318.00 g/mol",
+"atomicNumber": "NA",
+"color": "colourless",
+"feature": "Indicator"
+},
+{
+"_id": "59857aaeaa0f6a75f339c897",
+"chemical": "HCl",
+"name": "Hydrochloric Acid",
+"molMass": "36.65 g/mol",
+"atomicNumber": "NA",
+"color": "colourless",
+"feature": "Acid"
+},
+{
+"_id": "59857ca0aa0f6a75f339c898",
+"chemical": "C14H14N3NaO3S",
+"name": "Methyl Orange",
+"molMass": "327.33 g/mol",
+"atomicNumber": "NA",
+"color": "yellow",
+"feature": "Indicator"
+},
+{
+"_id": "59857e6aaa0f6a75f339c899",
+"chemical": "C27H28Br2O5S",
+"name": "Bromothymol blue",
+"molMass": "624.38 g/mol",
+"atomicNumber": "NA",
+"color": "colorless",
+"feature": "Indicator"
+},
+{
+"_id": "59857fb6aa0f6a75f339c89a",
+"chemical": "NaCO3",
+"name": "Sodium Carbonate",
+"molMass": "105.9888 g/mol",
+"atomicNumber": "NA",
+"color": "colorless",
+"feature": "Base"
+},
+{
+"_id": "598e8d1f3a5fb90632352270",
+"chemical": "H2SO4",
+"name": "Sulphuric Acid",
+"molMass": "98.874 g/mol",
+"atomicNumber": "NA",
+"color": "colourless",
+"feature": "Acid"
+},
+{
+"_id": "598e930b3a5fb90632352275",
+"chemical": "NaOH",
+"name": "Sodium Hydroxide",
+"molMass": "40.827 g/mol",
+"atomicNumber": "NA",
+"color": "colourless",
+"feature": "Base"
+},
+{
+"_id": "598e94393a5fb90632352277",
+"chemical": "NH4OH",
+"name": "Ammonium Hydroxide",
+"molMass": "35.934 g/mol",
+"atomicNumber": "NA",
+"color": "colourless",
+"feature": "Base"
+},
+{
+"_id": "598e95b73a5fb90632352279",
+"chemical": "HNO3",
+"name": "Nitric Acid",
+"molMass": "63.94 g/mol",
+"atomicNumber": "NA",
+"color": "colourless",
+"feature": "Acid"
+}
+]
+}
+
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+
+{
+"_id": "5980b432df01eb6a704b96e6",
+"react1": "abc",
+"react2": "pdq",
+"p1": {
+"chemical": "H2SO4",
+"name": "Sulphuric Acid",
+"molMass": "98.079 g/mol",
+"atomicNumber": "NA",
+"color": "colourless",
+"feature": "Acid"
+},
+"p2": {
+"chemical": "H2123",
+"name": "Sulphur123c Acid",
+"molMass": "98.07912 g/mol",
+"atomicNumber": "NAA",
+"color": "colourlesss",
+"feature": "Acids"
+}
+},
+{
+"_id": "5980b52edf01eb6a704b96e7",
+"react1": "abc",
+"react2": "pdq",
+"p1": {
+"chemical": "H2SO4",
+"name": "Sulphuric Acid",
+"molMass": "98.079 g/mol",
+"atomicNumber": "NA",
+"color": "colourless",
+"feature": "Acid"
+},
+"p2": {
+"chemical": "H2123",
+"name": "Sulphur123c Acid",
+"molMass": "98.07912 g/mol",
+"atomicNumber": "NAA",
+"color": "colourlesss",
+"feature": "Acids"
+}
+},
+{
+"_id": "5981f3bc076a386bde50151b",
+"react1": "H2SO4",
+"react2": "Fe",
+"p1": {
+"chemical": "FeSO4",
+"name": "Ferrous Sulphate",
+"molMass": "151.908 g/mol",
+"atomicNumber": "NA",
+"color": "0.18,0.19,0",
+"feature": "Acid"
+},
+"p2": {
+"chemical": "H2",
+"name": "Hydrogen",
+"molMass": "2.01588 g/mol",
+"atomicNumber": "NAA",
+"color": "colourlesss",
+"feature": "Gas"
+}
+},
+{
+"_id": "5985bad2aa0f6a75f339c89b",
+"react1": "C27H28Br2O5S",
+"react2": "HCl",
+"p1": {
+"chemical": "C27H29Br2O5S",
+"name": "Bromothymol Blue ion",
+"molMass": "625.38 g/mol",
+"atomicNumber": "NA",
+"color": "yellow",
+"feature": "Ion"
+},
+"p2": {
+"chemical": "Cl",
+"name": "Chloride Ion",
+"molMass": "35.5 g/mol",
+"atomicNumber": "NA",
+"color": "colourlesss",
+"feature": "Ion"
+}
+},
+{
+"_id": "598e8e213a5fb90632352271",
+"react1": "C27H28Br2O5S",
+"react2": "H2SO4",
+"p1": {
+"chemical": "C27H30Br2O5S",
+"name": "Bromothymol Blue ion",
+"molMass": "625.38 g/mol",
+"atomicNumber": "NA",
+"color": "#2A3A9F",
+"feature": "Ion"
+},
+"p2": {
+"chemical": "SO42-",
+"name": "Sulphate Ion",
+"molMass": "96.342 g/mol",
+"atomicNumber": "NA",
+"color": "colourlesss",
+"feature": "Ion"
+}
+},
+{
+"_id": "598e90973a5fb90632352272",
+"react1": "C14H14N3NaO3S",
+"react2": "H2SO4",
+"p1": {
+"chemical": "C14H14N3NaO3S",
+"name": "Methyl Orange Ion",
+"molMass": "327.33 g/mol",
+"atomicNumber": "NA",
+"color": "#E15160",
+"feature": "Ion"
+},
+"p2": {
+"chemical": "H2O",
+"name": "Water",
+"molMass": "18.764 g/mol",
+"atomicNumber": "NA",
+"color": "colourlesss",
+"feature": "Water"
+}
+},
+{
+"_id": "598e91753a5fb90632352273",
+"react1": "C14H14N3NaO3S",
+"react2": "NaCO3",
+"p1": {
+"chemical": "C14H14N3NaO3S",
+"name": "Methyl Orange Ion",
+"molMass": "327.33 g/mol",
+"atomicNumber": "NA",
+"color": "#FFFC53",
+"feature": "Ion"
+},
+"p2": {
+"chemical": "CO2",
+"name": "Carbon Dioxide",
+"molMass": "44.562 g/mol",
+"atomicNumber": "NA",
+"color": "colourlesss",
+"feature": "effervescence"
+}
+},
+{
+"_id": "598e91df3a5fb90632352274",
+"react1": "C14H14N3NaO3S",
+"react2": "H2O",
+"p1": {
+"chemical": "C14H16N3NaO4S",
+"name": "Methyl Orange Ion",
+"molMass": "327.33 g/mol",
+"atomicNumber": "NA",
+"color": "#FFFC53",
+"feature": "Ion"
+},
+"p2": {
+"chemical": "NA",
+"name": "NA",
+"molMass": "NA",
+"atomicNumber": "NA",
+"color": "NA",
+"feature": "NA"
+}
+},
+{
+"_id": "598e93983a5fb90632352276",
+"react1": "HCl",
+"react2": "NaOH",
+"p1": {
+"chemical": "NaCl",
+"name": "Sodium Chloride",
+"molMass": "58.620 g/mol",
+"atomicNumber": "NA",
+"color": "#FFFFFF",
+"feature": "Salt"
+},
+"p2": {
+"chemical": "H2O",
+"name": "Water",
+"molMass": "18.764 g/mol",
+"atomicNumber": "NA",
+"color": "colourlesss",
+"feature": "Water"
+}
+},
+{
+"_id": "598e95543a5fb90632352278",
+"react1": "HCl",
+"react2": "NH4OH",
+"p1": {
+"chemical": "NH4Cl",
+"name": "Ammonium Chloride",
+"molMass": "53.920 g/mol",
+"atomicNumber": "NA",
+"color": "#FFFFFF",
+"feature": "Salt"
+},
+"p2": {
+"chemical": "H2O",
+"name": "Water",
+"molMass": "18.764 g/mol",
+"atomicNumber": "NA",
+"color": "colourlesss",
+"feature": "Water"
+}
+},
+{
+"_id": "598e96023a5fb9063235227a",
+"react1": "HNO3",
+"react2": "NH4OH",
+"p1": {
+"chemical": "NH4NO3",
+"name": "Ammonium Nitrate",
+"molMass": "81.860 g/mol",
+"atomicNumber": "NA",
+"color": "#FFFFFF",
+"feature": "Salt"
+},
+"p2": {
+"chemical": "H2O",
+"name": "Water",
+"molMass": "18.764 g/mol",
+"atomicNumber": "NA",
+"color": "colourlesss",
+"feature": "Water"
+}
+},
+{
+"_id": "598e987b3a5fb9063235227b",
+"react1": "C20H14O4",
+"react2": "NaOH",
+"p1": {
+"chemical": "C20H15O5",
+"name": "Phenolphthalein",
+"molMass": "338.328 g/mol",
+"atomicNumber": "NA",
+"color": "#EC510E",
+"feature": "Ion"
+},
+"p2": {
+"chemical": "Na",
+"name": "Sodium Ion",
+"molMass": "23.342 g/mol",
+"atomicNumber": "NA",
+"color": "colourlesss",
+"feature": "Ion"
+}
+},
+{
+"_id": "598e98e13a5fb9063235227c",
+"react1": "C20H14O4",
+"react2": "HCl",
+"p1": {
+"chemical": "C20H15O4",
+"name": "Phenolphthalein",
+"molMass": "319.728 g/mol",
+"atomicNumber": "NA",
+"color": "#EC0EC7",
+"feature": "Ion"
+},
+"p2": {
+"chemical": "Cl-",
+"name": "Chloride Ion",
+"molMass": "35.56 g/mol",
+"atomicNumber": "NA",
+"color": "colourlesss",
+"feature": "Ion"
+}
+}
+]
+
+
+
+
+
+
+
+
+
+
+
